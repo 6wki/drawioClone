@@ -1,0 +1,1003 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600&display=swap');
+
+:root {
+    --hovering: rgb(237, 237, 237);
+    --bg: #fbfbfb;
+    --main: rgb(223, 108, 12);
+    --bordering: 0.2px solid rgb(225, 225, 225);
+    --rightColor: rgb(112, 112, 112);
+}
+
+::-webkit-scrollbar {
+    width: 4.8px;
+    height: 4.8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(210, 210, 210);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+/* Utilities */
+
+.bordering {
+    border-bottom: var(--bordering);
+}
+
+.two .icon {
+    margin-right: 8px;
+}
+
+.two .icon:last-child {
+    margin: 0;
+}
+
+.two .icon img {
+    width: 15px;
+}
+
+.empty img {
+    filter: invert(68%) sepia(0%) saturate(0%) hue-rotate(107deg) brightness(98%) contrast(85%);
+}
+
+.empty:hover {
+    background-color: transparent!important;
+}
+
+.specialH1 {
+    font-size: 13px;
+    font-weight: 900;
+    color: #df6c0c;
+}
+
+.hovering:hover {
+    background-color: rgb(237, 237, 237);;
+}
+
+.hovering {
+    transition: 0.2s;
+}
+
+.arrowShap {
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    position: relative;
+}
+
+.arrowShap p {
+    transition: 0.2s;
+    position: absolute;
+    font-size: 3px;
+}
+
+.rightButton {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rightColor);
+    cursor: pointer;
+}
+
+.rightBtn {
+    font-size: 12px;
+    width: 100%;
+}
+
+.pageEdit {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    background-color: #f1f3f4;
+    border-right: var(--bordering);
+}
+
+.pageEdit:hover {
+    background-color: var(--hovering);
+}
+
+/* NAVBAR */
+
+#responsiveNav {
+    width: 18px;
+    position: absolute;
+    left: 2%;
+    visibility: hidden;
+    cursor: pointer;
+    filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(89%) contrast(91%);
+}
+
+/* TOP OF NAV */
+
+nav {
+    width: 100%;
+    height: 103px;
+}
+
+.topOfNav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 15px;
+    height: 64px;
+    overflow: hidden;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.navInfo ul {
+    display: flex;
+    list-style: none;
+}
+
+.navInfo ul li {
+    font-size: 14px;
+    padding: 3.5px 8px;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+.navInfo ul li:active,
+.navInfo h1:active,
+.edit .icon:active,
+.sectionHeading:active {
+    background-color: #F8C382!important;
+}
+
+.edit .empty:active {
+    background-color: transparent!important;
+}
+
+.empty:active {
+    background-color: transparent;
+}
+
+.edit:nth-child(3) .icon:active,
+.edit:nth-child(8) .icon:active,
+.leftOfNav .edit:last-child .icon:active,
+.rightOfNav .edit .icon:active {
+    filter: none!important;
+}
+
+
+
+.navInfo ul li:hover, .navInfo h1:hover {
+    background-color: var(--hovering);
+}
+
+.navInfo h1 {
+    width: fit-content;
+    font-size: 17.5px;
+    font-weight: 300;
+    padding: 1.5px 8px;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+#logo {
+    margin-right: 12px;
+    background-color: rgb(240, 135, 5);
+    width: 32px;
+    height: 36px;
+    opacity: 0.85;
+    border-radius: 3px;
+}
+
+#goDown {
+    width: 18px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40px;
+    visibility: hidden;
+    filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(89%) contrast(91%);
+}
+
+.topOfNav > img {
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin: 5px 8px 0 0;
+}
+
+.topOfNav > img:active {
+    opacity: 0.6;
+}
+
+.partage {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 147, 30);
+    border-color: rgb(240, 135, 5);
+    background-image: none;
+    border-radius: 2px;
+    line-height: 28px;
+    padding: 2px 18px;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-right: 31px;
+}
+
+.partage:active {
+    opacity: 0.6;
+}
+
+.partage img {
+    width: 12px;
+    margin-right: 6px;
+}
+
+/* BOTTOM OF NAV */
+
+.bottomOfNav {
+    height: 39px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Of Nav */
+
+.leftOfNav {
+    display: flex;
+}
+
+.edit:first-child {
+    margin-left: 15px;
+}
+
+.edit:nth-child(2) {
+    font-size: 14px;
+}
+
+.edit {
+    display: flex;
+    border-right: var(--bordering);
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    height: 20px;
+    transition: 0.2s;
+}
+
+.icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    border-radius: 1px;
+    height: 25px;
+}
+
+.icon img {
+    width: 15px;
+}
+
+#arrow {
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    filter: invert(68%) sepia(0%) saturate(0%) hue-rotate(107deg) brightness(98%) contrast(85%);
+}
+
+.icon:hover {
+    background-color: var(--hovering);
+}
+
+.edit:nth-child(4) .icon:nth-child(2) img {
+    transform: rotate(180deg);
+}
+
+.edit:nth-child(4) .icon img {
+    width: 10px;
+}
+
+.edit:nth-child(3) .icon:hover,
+.edit:nth-child(8) .icon:hover,
+.leftOfNav .edit:last-child .icon:hover,
+.rightOfNav .edit .icon:hover
+ {
+    filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
+}
+
+.leftOfNav .edit:last-child .icon img,
+.rightOfNav .edit .icon,
+.edit:nth-child(3) .icon:nth-child(1) img,
+.edit:nth-child(8) .icon:nth-child(1) img,
+.edit:nth-child(8) .icon:nth-child(2) img,
+.edit:nth-child(3) .icon:nth-child(2) img,
+.search img,
+.icons img,
+.pageEdit img
+ {
+    filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(89%) contrast(91%);
+}
+
+/* Right Of Nav */
+
+.rightOfNav .edit {
+    border: none;
+}
+
+.rightOfNav .edit .icon img {
+    width: 12px;
+}
+
+/* Left Side Of Main */
+
+#open {
+    width: 10px;
+    position: absolute;
+    bottom: 50%;
+    left: 5px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.rightSide #open {
+    transform: rotate(180deg);
+}
+
+.leftSide {
+    width: 214px;
+    position: absolute;
+    top: 103px;
+    bottom: 38px;
+    border-right: var(--bordering);
+    margin: 0 3px 0 0;
+}
+
+.leftSideContainer {
+    width: 211px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    padding-right: 3px;
+}
+
+.bottomOfLeftSide {
+    cursor: default;
+    padding: 0 17px;
+    width: 214px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    border-top: var(--bordering);
+    border-right: var(--bordering);
+    position: absolute;
+    bottom: 0;
+}
+
+.bottomOfLeftSide:hover {
+    background-color: var(--hovering);
+}
+
+.bottomOfLeftSide img {
+    margin-right: 8px;
+    width: 9px;
+    filter: invert(41%) sepia(51%) saturate(1305%) hue-rotate(356deg) brightness(102%) contrast(95%);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    padding: 14px 8px;
+    padding-bottom: 16px;
+    width: 100%;
+    justify-content: center;
+    border-bottom: var(--bordering);
+}
+
+.searchContainer {
+    position: relative;
+    height: 26.7px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 0.2px solid var(--hovering);
+}
+
+.searchContainer img {
+    right: 7px;
+    width: 13px;
+}
+
+.searchImg {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.searchContainer input {
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+    outline: none;
+    border: none;
+}
+
+.section {
+    user-select: none;
+}
+
+.sectionHeading {
+    display: flex;
+    align-items: center;
+    height: 35.5px;
+    border-bottom: var(--bordering);
+}
+
+.sectionHeading:hover {
+    background-color: var(--hovering);
+}
+
+.section #arrow {
+    margin-right: 2px;
+    margin-left: 0!important;
+}
+
+.section h1 {
+    font-size: 11.8px;
+}
+
+.opened {
+    display: flex;
+    justify-content: center;
+    padding: 11px 0;
+    border-bottom: var(--bordering);
+    user-select: none;
+}
+
+.opened p {
+    padding: 5px 20px;
+    color: #bababa;
+    border-radius: 10px;
+    border: dotted 2px #bababa;
+    font-size: 13px;
+}
+
+.icons img {
+    width: 8px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    filter: none;
+}
+
+.section:nth-child(2) .sectionHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headingIcons {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    padding-right: 10px;
+}
+
+.item {
+    width: 35px;
+    padding: 4px 4px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.item:active {
+    opacity: 0.6;
+}
+
+.item img {
+    width: 100%;
+}
+
+.itemsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 6px 0;
+}
+
+.TheItems {
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    border-bottom: var(--bordering);
+}
+
+.item:nth-child(3) {
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+}
+
+.item:nth-child(4) p {
+    font-size: 2px;
+    line-height: 3px;
+}
+
+.item:nth-child(4) h4 {
+    font-size: 4px;
+    padding-bottom: 2px;
+}
+
+.item:nth-child(5) img {
+    height: 70%;
+}
+
+.item:nth-child(5) {
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(8) img {
+    transform: rotate(90deg);
+}
+
+.item:nth-child(9) img {
+    transform: rotate(135deg);
+    width: 70%;
+    height: 70%;
+}
+
+.item:nth-child(9) {
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(10) img {
+    transform: rotate(182deg);
+}
+
+.item:nth-child(12) img,
+.item:nth-child(15) img {
+    transform: rotate(90deg);
+}
+
+.item:nth-child(25) img {
+    transform: rotate(205deg);
+}
+
+.item:nth-child(26) img {
+    transform: rotate(90deg);
+}
+.item:nth-child(27) img,
+.item:nth-child(29) img {
+    transform: rotate(270deg);
+}
+
+.item:nth-child(32) {
+    font-size: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.item:nth-child(33) img {
+    transform: rotate(280deg);
+}
+
+.item:nth-child(34) img {
+    transform: rotate(135deg);
+}
+
+.item:nth-child(35) img,
+.item:nth-child(37) img,
+.item:nth-child(36) img,
+.item:nth-child(38) img,
+.item:nth-child(39) img
+ {
+    transform: rotate(220deg);
+}
+
+.item:nth-child(36) img {
+    width: 1px;
+}
+
+.item:nth-child(39) img {
+    width: 10px;
+}
+
+.item:nth-child(40) img {
+    transform: rotate(125deg);
+}
+
+.item:nth-child(41) img {
+    transform: rotate(90deg);
+}
+
+.item:hover p {
+    background-color: var(--hovering);
+}
+
+.label {
+    top: 43.8%;
+    left: 25%;
+    padding: 0 1px;
+    background-color: var(--bg);
+}
+
+.source {
+    top: 35%;
+    left: 0;
+}
+
+.target {
+    top: 35%;
+    right: 30%;
+}
+
+#letter {
+    position: absolute;
+    top: 37%;
+    left: 30%;
+    width: 8px;
+    background-color: var(--bg);
+    transition: 0.2s;
+}
+
+.item:last-child:hover #letter {
+    background: var(--hovering);
+}
+
+/* The Right Side */
+
+.rightSide {
+    width: 240px;
+    position: absolute;
+    right: 0;
+    top: 103px;
+    bottom: 0px;
+    overflow: auto;
+    border-left: var(--bordering);
+}
+
+.topOfRightSide {
+    display: flex;
+}
+
+.styleBtn {
+    background-color: rgb(241, 243, 244);
+    border-bottom: var(--bordering);
+    border-left: var(--bordering);
+}
+
+.x {
+    width: 60.3px;
+    background-color: rgb(241, 243, 244);
+    border-left: var(--bordering);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--bordering);
+    cursor: pointer;
+}
+
+.x img {
+    width: 8px;
+    filter: invert(79%) sepia(9%) saturate(0%) hue-rotate(54deg) brightness(99%) contrast(92%);
+}
+
+.design {
+    display: flex;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 7px;
+}
+
+.arrows img {
+    width: 13px;
+    border: var(--bordering);
+    border-radius: 2px;
+}
+
+.arrows img:first-child {
+    transform: rotate(180deg);
+}
+
+.rightSection {
+    padding: 10px 15px;
+    color: var(--rightColor);
+    border-bottom: var(--bordering);
+}
+
+.rightSection h5 {
+    margin-bottom: 5px;
+}
+
+.rightSideFirst .design {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.rightSideSecond .design,
+.rightSideThird .design {
+    flex-direction: column;
+}
+
+.rightSideSecond label {
+    margin-bottom: 5px;
+}
+
+.design {
+    padding: 1px;
+}
+
+.coloring {
+    display: flex;
+    align-items: center;
+}
+
+.design input[type=text],
+.design input[type=color] {
+    width: 48px;
+    height: 21px;
+}
+
+.design input[type=text] {
+    text-align: right;
+    padding-right: 4px;
+    border-radius: 4px;
+    border: var(--bordering);
+}
+
+.design label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.design label p {
+    margin-left: 6px;
+}
+
+.modifier {
+    width: 104px;
+    height: 22px;
+}
+
+.rightSideFirst .design:last-child {
+    align-items: flex-end;
+}
+
+.type {
+    display: flex;
+    margin-left: 8px;
+}
+
+.type label:first-child {
+    margin-right: 10px;
+}
+
+.rightSideThird .design select {
+    font-size: 11px;
+    border-radius: 5px;
+    margin-bottom: 9px;
+}
+
+/* Windows */
+
+.windows {
+    position: absolute;
+    bottom: 0;
+    left: 214px;
+    right: 240px;
+    height: 38px;
+    border-top: var(--bordering);
+    background-color: #f1f3f4;
+    overflow: auto;
+}
+
+.windows .page .pageEdit:first-child img {
+    transform: rotate(90deg);
+    width: 15px;
+}
+
+.windows .page .pageEdit:last-child img {
+    width: 14px;
+}
+
+.windows .page .pageEdit:last-child {
+    border-left: var(--bordering);
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    width: min-content;
+    cursor: move;
+}
+
+.page .specialH1 {
+    text-align: center;
+    width: 140px;
+}
+
+/* Drawing Paper */
+
+.drawingPaper {
+    position: absolute;
+    left: 214px;
+    right: 240px;
+    top: 103px;
+    bottom: 38px;
+    background-color: #f8f9fa;
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.drawingPaper img {
+    width: 60rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px -2px;
+}
+
+.dpaper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80rem;
+    height: 75rem;
+    inset: 103px 240px 38px 224px;
+}
+
+/* Responsive Art */
+
+@media (max-width: 860px) {
+    .bottomOfNav .edit {
+        display: none;
+    }
+
+    #responsiveNav {
+        visibility: visible;
+    }
+
+    .partage {
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .partage img {
+        margin: 0;
+        filter: invert(99%) sepia(75%) saturate(2%) hue-rotate(338deg) brightness(110%) contrast(100%);
+    }
+
+    .partage p {
+        display: none;
+    }
+}
+
+@media (max-width: 653px) {
+
+    .topOfNav ul,
+    .topOfNav h1 {
+        display: none;
+        /* I made the top of navbar invisible
+        because you would be able to visible it
+        by clicking on the logo "but now i'm still learning
+        coding" */
+    }
+
+    .navList {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navSettings {
+        position: absolute;
+        right: 0;
+    }
+
+    .bottomOfLeftSide {
+        width: 45px;
+    }
+
+    .bottomOfLeftSide h1 {
+        display: none;
+    }
+
+    .leftSideContainer, .rightSideContainer {
+        display: none;
+    }
+
+    .leftSide, .rightSide {
+        width: 21px;
+    }
+
+    .drawingPaper {
+        left: 21px;
+        right: 21px;
+    }
+
+    .windows {
+        right: 21px;
+        left: 45px;
+    }
+
+    #logo {
+        width: 120px;
+        height: 30px;
+        top: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #goDown,
+    #open {
+        filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(61deg) brightness(89%) contrast(91%);
+        visibility: visible;
+    }
+}
