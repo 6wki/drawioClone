@@ -893,9 +893,6 @@ nav {
     bottom: 38px;
     background-color: #f8f9fa;
     overflow: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
 .drawingPaper img {
@@ -910,7 +907,6 @@ nav {
     justify-content: center;
     width: 80rem;
     height: 75rem;
-    inset: 103px 240px 38px 224px;
 }
 
 /* Responsive Art */
